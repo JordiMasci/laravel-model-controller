@@ -7,13 +7,17 @@ use App\Models\Movie;
 
 class PageController extends Controller
 {
-    function index() {
+    public function index() {
+       
         return view('models.homePage');
     }
-    function listaCard() {
-        return view('models.listaCard');
+    public function listaCard() {
+         // RECUPERO MOVIES DAL DATABASE
+         $movies = Movie::all();
+
+        return view('models.listaCard', compact('movies'));
     }
-    function about() {
+    public function about() {
         $lista = [
             'prova 1',
             'prova 2',
