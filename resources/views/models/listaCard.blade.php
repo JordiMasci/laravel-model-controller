@@ -12,11 +12,11 @@
                             {{ $movie->title }}
                         </div>
                         <div class="card-body">
-                            <p class="card-text">{{ $movie->description }}</p>
+                            <p class="card-text">-{{ $movie->nationality }} <br>
+                                - voto:{{ $movie->vote }}</p>
                         </div>
                     </div>
                 </div>
             @endforeach
         </div>
-        
     @endsection
