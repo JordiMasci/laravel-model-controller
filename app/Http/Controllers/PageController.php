@@ -8,7 +8,7 @@ use App\Models\Movie;
 class PageController extends Controller
 {
     function index() {
-        return view('home');
+        return view('models.homePage');
     }
     function listaCard() {
         return view('models.listaCard');
